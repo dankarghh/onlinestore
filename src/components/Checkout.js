@@ -2,7 +2,7 @@ import React from "react";
 import CartContext from "../CartContext";
 import { useContext } from "react";
 
-function Checkout() {
+function Checkout(props) {
   const {
     cartItems,
     decreaseCartQty,
@@ -60,6 +60,7 @@ function Checkout() {
 
   return (
     <div className="checkout">
+      {props.handleCloseCart}
       <h1 className="checkout__heading">Checkout</h1>
       {!checkoutCartContents && <p>Oh no!</p>}
 

@@ -20,11 +20,11 @@ function Shop() {
 
   return (
     <div className="shop">
-      <div className="shop__cover hidden"></div>
+      {/* <div className="shop__cover hidden"></div> */}
 
       <div className="shop__container">
         {inventoryItems}
-        <Cart />
+        {/* <Cart /> */}
       </div>
     </div>
   );

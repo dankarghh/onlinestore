@@ -10,6 +10,7 @@ function Cart() {
     removeFromCart,
     cartTotal,
     clearCart,
+    toggleCart,
   } = useContext(CartContext);
 
   const cartContents = cartItems?.map(item => {
@@ -73,7 +74,9 @@ function Cart() {
           Total: $ {cartTotal(cartItems)}.00 (including GST)
         </div>
         <Link to="/checkout">
-          <button className="btn btn--checkout">CHECKOUT NOW</button>
+          <button className="btn btn--checkout" onClick={toggleCart}>
+            CHECKOUT NOW
+          </button>
         </Link>
       </div>
     </div>

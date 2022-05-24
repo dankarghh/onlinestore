@@ -52,8 +52,9 @@ body {
   margin-left: 1rem;
 }
 .main {
-  height: 100%;
+  min-height: 100vh;
   margin-bottom: auto;
+  position: relative;
 }
 .footer {
   background-color: rgb(10, 10, 32);
@@ -96,6 +97,7 @@ body {
   background-color: rgba(0, 0, 0, 0.384);
   height: 100%;
   width: 100%;
+  z-index: 1;
 }
 
 .shop__inventory-card img:hover {
@@ -115,6 +117,7 @@ body {
   height: 100%;
   right: 0;
   transition: all 250ms;
+  z-index: 1;
 }
 .cart__content-details {
   display: flex;
@@ -259,6 +262,8 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   max-width: 1400px;
+  gap: 10px;
+  padding-bottom: 10px;
 }
 .home__gallery-container img {
   width: 100%;
