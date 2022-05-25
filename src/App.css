@@ -59,7 +59,8 @@ body {
 .footer {
   background-color: rgb(10, 10, 32);
   /* margin-top: auto; */
-  height: 20px;
+  height: 40px;
+  margin-top: 1rem;
 }
 .shop h1 {
   margin: 0;
@@ -81,6 +82,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.shop__heading {
+  padding-top: 2rem;
 }
 .shop__inventory-card h4 {
   margin: 0;
@@ -267,4 +271,53 @@ body {
 }
 .home__gallery-container img {
   width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .shop__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .shop__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home__heading {
+    font-size: 1.8rem;
+  }
+
+  .btn--shop-now {
+    font-size: 1.8rem;
+    border: solid 5px black;
+  }
+  .home__gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .shop__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .home__gallery-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .home__heading {
+    font-size: 2rem;
+  }
+  .home__landing-img {
+    display: none;
+  }
+  .btn--shop-now {
+    font-size: 2rem;
+  }
+  .home__landing-img-container {
+    background-image: url("../public/images/landing_mob.png");
+    background-position: 20%;
+    height: 800px;
+  }
 }

@@ -20,12 +20,10 @@ function Shop() {
 
   return (
     <div className="shop">
-      {/* <div className="shop__cover hidden"></div> */}
-
-      <div className="shop__container">
-        {inventoryItems}
-        {/* <Cart /> */}
-      </div>
+      <h1 className="shop__heading">
+        Mens Medium Tees and Jackets. Nothing Else.
+      </h1>
+      <div className="shop__container">{inventoryItems}</div>
     </div>
   );
 }
