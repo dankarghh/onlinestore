@@ -26,6 +26,10 @@ body {
 .header {
   background-color: rgb(10, 10, 32);
   color: rgb(226, 226, 250);
+  position: static;
+  /* top: 0; */
+  width: 100%;
+  z-index: 1;
 }
 .header__container {
   padding: 0.5rem;
@@ -68,6 +72,10 @@ body {
 
 .btn:hover {
   background-color: rgb(27, 27, 83);
+}
+
+.btn:active {
+  transform: scale(0.95);
 }
 
 .shop__container {
@@ -318,6 +326,6 @@ body {
   .home__landing-img-container {
     background-image: url("../public/images/landing_mob.png");
     background-position: 20%;
-    height: 800px;
+    height: 100vh;
   }
 }

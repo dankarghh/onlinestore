@@ -19,7 +19,6 @@ export function CartProvider({ children }) {
           item.qty = item.qty + 1;
           return item;
         } else {
-          item.qty = item.qty;
           return item;
         }
       });
@@ -59,7 +58,7 @@ export function CartProvider({ children }) {
 
   function removeFromCart(event, id) {
     const selectedItem = cartItems.find(item => item.id === id);
-    const newCartItems = cartItems.filter(item => item.id != selectedItem.id);
+    const newCartItems = cartItems.filter(item => item.id !== selectedItem.id);
     setCartItems(newCartItems);
   }
   function cartTotal(cartItems) {
